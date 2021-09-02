@@ -3,11 +3,10 @@ import { Formik, Field, Form, ErrorMessage } from "formik";
 import { signupUserSchema } from "../../Services/user";
 import { userService } from "../../Services";
 
-
-
 class SignupScreen extends Component {
   handleSubmit = (values) => {
-    userService.signUp(values)
+    userService
+      .signUp(values)
       .then((res) => {
         console.log(res);
       })
@@ -19,12 +18,16 @@ class SignupScreen extends Component {
     return (
       <div className="w-100">
         <div className="d-flex">
-          <img src="https://picsum.photos/2000" className="w-50" />
+          <img
+            src="https://picsum.photos/2000"
+            className="w-50" 
+            style={{ height: "100%" }}
+          />
           <div
             className="w-50 d-flex flex-column justify-content-center 
       align-items-center"
           >
-            <h1 className="display-4 text-center w-100 mb-5">Sign up</h1>
+            <h1 className="display-4 text-center w-100 mb-5">Đăng kí</h1>
             <Formik
               initialValues={{
                 taiKhoan: "",
@@ -37,7 +40,10 @@ class SignupScreen extends Component {
               validationSchema={signupUserSchema}
               onSubmit={this.handleSubmit}
               render={(formikProps) => (
-                <Form className="w-50 mx-auto">
+                <Form
+                  className="w-50 mx-auto"
+                  
+                >
                   <div className="form-group">
                     <label>Tài khoản: </label>
                     <Field

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {Link} from 'react-router-dom';
 
 class CourseItem extends Component {
     render() {
@@ -8,7 +9,7 @@ class CourseItem extends Component {
                 <p className="lead font-weight-bold">{this.props.item.tenKhoaHoc}</p>
                 <p className="lead">{this.props.item.nguoiTao.hoTen}</p>
                 <p className="lead">Rating: 5.0</p>
-                <button className="btn btn-success">Go to detail</button>
+                <Link to={`/detail/${this.props.item.maKhoaHoc}`} className="btn btn-success">Go to detail</Link>
             </div>
         )
     }

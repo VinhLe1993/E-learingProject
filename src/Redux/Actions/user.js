@@ -1,14 +1,14 @@
+import { userService } from "../../Services";
 import { createAction } from ".";
-import { courseService } from "../../Services";
-import { FETCH_COURSES } from "./type";
-//Async action
+import { FETCH_CREDENTIALS } from "./type";
 
-export const fetchCourse = () => {
+export const login = (user) => {
   return (dispatch) => {
-    courseService
-      .fetchCourse()
+    userService
+      .signIn(user)
       .then((res) => {
-        dispatch(createAction(FETCH_COURSES, res.data));
+        dispatch(createAction(FETCH_CREDENTIALS, res.data));
+        localStorage.setItem('credentials', JSON.stringify(res.data))
       })
       .catch((err) => {
         console.log(err);

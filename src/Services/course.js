@@ -8,9 +8,9 @@ class CourseService{
             method: "GET",
           })
     }
-    fetchCourseDetail () {
+    fetchCourseDetail (id) {
       return  Axios({
-        url: "https://elearning0706.cybersoft.edu.vn/api/QuanLyKhoaHoc/LayThongTinKhoaHoc?maKhoaHoc=ITEC%202112",
+        url: `https://elearning0706.cybersoft.edu.vn/api/QuanLyKhoaHoc/LayThongTinKhoaHoc?maKhoaHoc=${id}`,
         method: "GET",
       })
     }

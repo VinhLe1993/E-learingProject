@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import CourseItem from "../../Components/CourseItems";
 
 import { connect } from "react-redux";
-import { fetchCourse } from "../../Redux/Actions/user";
+import { fetchCourse } from "../../Redux/Actions/course";
 
 
 class HomeScreen extends Component {

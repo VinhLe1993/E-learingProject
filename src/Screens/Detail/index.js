@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-import Axios from "axios";
 import { connect } from "react-redux";
-import { courseService } from "../../Services";
-import { createAction } from "../../Redux/Actions";
-import { FETCH_COURSE_DETAIL } from "../../Redux/Actions/type";
+
+
+import { fetchDetailCourse } from "../../Redux/Actions/course";
 
 class CourseDetailScreen extends Component {
   render() {
@@ -15,13 +14,7 @@ class CourseDetailScreen extends Component {
     );
   }
   componentDidMount() {
-   courseService.fetchCourseDetail()
-      .then((res) => {
-        this.props.dispatch(createAction(FETCH_COURSE_DETAIL, res.data));
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    this.props.dispatch(fetchDetailCourse(this.props.match.params.courseID))
   }
 }
 
