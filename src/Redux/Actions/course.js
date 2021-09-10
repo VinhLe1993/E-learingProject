@@ -8,7 +8,7 @@ export const fetchCourse = () => {
     courseService
       .fetchCourse()
       .then((res) => {
-        dispatch(createAction(FETCH_COURSES, res.data));
+        dispatch(createAction(FETCH_COURSES, res.data.slice(0,8) ));
       })
       .catch((err) => {
         console.log(err);

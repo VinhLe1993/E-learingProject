@@ -8,10 +8,16 @@ export const login = (user) => {
       .signIn(user)
       .then((res) => {
         dispatch(createAction(FETCH_CREDENTIALS, res.data));
-        localStorage.setItem('credentials', JSON.stringify(res.data))
+        localStorage.setItem("credentials", JSON.stringify(res.data));
+        dispatch({
+          type: "SIGNIN",
+          userSignin: res.data,
+        });
       })
       .catch((err) => {
         console.log(err);
       });
   };
 };
+
+

@@ -3,13 +3,16 @@ import "./App.css";
 import CourseDetailScreen from "./Screens/Detail";
 import HomeScreen from "./Screens/Home";
 import SignupScreen from "./Screens/Signup";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { Router, Route, Switch } from "react-router-dom";
 import Header from "./Layouts/Header";
 import SigninScreen from "./Screens/Signin";
+import { createBrowserHistory } from "history";
+export const history = createBrowserHistory();
 
-function App() {
+
+ function App() {
   return (
-    <BrowserRouter>
+    <Router history={history}>
       <Header />
       <Switch>
         <Route path="/detail/:courseID" exact component={CourseDetailScreen} />
@@ -17,8 +20,8 @@ function App() {
         <Route path="/signin" exact component={SigninScreen} />
         <Route path="/" exact component={HomeScreen} />
       </Switch>
-    </BrowserRouter>
+    </Router>
   );
-}
+};
 
 export default App;

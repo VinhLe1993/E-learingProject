@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import { signupUserSchema } from "../../Services/user";
 import { userService } from "../../Services";
+import { history } from "../../App";
 
 class SignupScreen extends Component {
   handleSubmit = (values) => {
@@ -9,6 +10,8 @@ class SignupScreen extends Component {
       .signUp(values)
       .then((res) => {
         console.log(res);
+        alert("Đăng ký thành công !");
+        history.push("/signin");
       })
       .catch((err) => {
         console.log(err);
