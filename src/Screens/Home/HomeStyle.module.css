@@ -68,47 +68,5 @@
     margin-bottom: 2rem;
 }
 
-.footer {
-    background-color: #f4f9fd;
-    padding: 3rem 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-   
-    
-}
 
-.footer__item {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 30%;
-    margin: 0 5rem;
-}
 
-.item__info {
-    display: flex;
-    flex-direction:column;
-    
-}
-
-.item__info a {
-    margin-bottom: 3rem;
-}
-
-.item__info h3 {
-    font-size: 1.2rem;
-    font-weight: 400;
-}
-
-.item__form h3 {
-    margin-bottom: 2rem;
-    font-size: 1.5rem;
-    font-weight: 400;
-    word-spacing: 2px;
-}
-
-.item__form input {
-    margin-bottom: 1rem;
-    width: 70%;
-}
