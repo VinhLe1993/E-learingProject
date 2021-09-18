@@ -8,10 +8,10 @@ import {
 } from "./type";
 //Async action
 
-export const fetchCourse = () => {
+export const fetchCourse = (tenKhoaHoc = "") => {
   return (dispatch) => {
     courseService
-      .fetchCourse()
+      .fetchCourse((tenKhoaHoc))
       .then((res) => {
         dispatch(createAction(FETCH_COURSES, res.data.slice(0, 8)));
       })

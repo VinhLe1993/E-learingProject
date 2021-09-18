@@ -8,10 +8,17 @@ import { fetchCourseList } from "../../Redux/Actions/course";
 
 
 class Header extends Component {
+  state = {
+    searchValue: "",
+  };
   renderCourseArr = () => {
     return this.props.courseListArr.map((item, index) => {
       return (
-        <a className="dropdown-item" key={index} href={`/courseslist/${item.maDanhMuc}`}>
+        <a
+          className="dropdown-item"
+          key={index}
+          href={`/courseslist/${item.maDanhMuc}`}
+        >
           {item.tenDanhMuc}
         </a>
       );
@@ -43,6 +50,13 @@ class Header extends Component {
       );
     }
   };
+
+  
+
+
+
+  
+
   render() {
     return (
       <nav
@@ -75,6 +89,7 @@ class Header extends Component {
                 Trang chủ
               </NavLink>
             </li>
+
             <li>
               <div class="btn-group">
                 <button
@@ -88,6 +103,16 @@ class Header extends Component {
                 </button>
                 <div class="dropdown-menu">{this.renderCourseArr()}</div>
               </div>
+            </li>
+            <li>
+            <NavLink
+                activeStyle={{ color: "black" }}
+                className={style.headerbutton}
+                exact
+                to="/coursesearch"
+              >
+                Tìm kiếm khóa học
+              </NavLink>
             </li>
           </ul>
           <ul className="navbar-nav">

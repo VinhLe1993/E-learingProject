@@ -9,6 +9,7 @@ import SigninScreen from "./Screens/Signin";
 import { createBrowserHistory } from "history";
 import CourseList from "./Screens/CourseList";
 import Footer from "./Layouts/Footer";
+import CourseSearch from "./Screens/CourseSearch"
 
 export const history = createBrowserHistory();
 
@@ -20,6 +21,7 @@ export const history = createBrowserHistory();
       <Switch>
         <Route path="/detail/:courseID" exact component={CourseDetailScreen} />
         <Route path="/courseslist/:listID" exact component={CourseList} />
+        <Route path="/coursesearch" exact component={CourseSearch} />
         <Route path="/signup" exact component={SignupScreen} />
         <Route path="/signin" exact component={SigninScreen} />
         <Route path="/" exact component={HomeScreen} />

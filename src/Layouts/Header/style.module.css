@@ -39,7 +39,6 @@
   touch-action: manipulation;
   vertical-align: baseline;
   width: auto;
-  
 }
 
 .headerbutton:hover,
@@ -47,15 +46,12 @@
   border-color: rgba(0, 0, 0, 0.15);
   box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
   color: rgba(0, 0, 0, 0.9);
-  
 }
 
 .headerbutton:hover {
   transform: translateY(-1px);
   text-decoration: none;
 }
-
-
 
 .headerbutton:active {
   background-color: #f0f0f1;
@@ -101,7 +97,6 @@
   border-color: rgba(0, 0, 0, 0.15);
   box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
   color: rgba(0, 0, 0, 0.9);
-  
 }
 
 .dropdown__button:hover {
@@ -110,5 +105,8 @@
   background-color: #f8f9fa;
 }
 
-
-
+.search__input {
+  color: black;
+  margin-top: 0.3rem;
+  width: 300px;
+}

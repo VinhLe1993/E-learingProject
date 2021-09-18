@@ -1,0 +1,64 @@
+.courseSearch__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+  }
+
+  .searchBar {
+      width: 100%;
+    
+      margin-top: 3rem;
+     
+  }
+  
+  
+  
+  .courseSearch__item {
+    width: 22%;
+    margin: 3rem 1rem;
+  }
+  
+  .courseSearch__card {
+    width: 100%;
+    height: 25rem;
+    padding: 8px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 7px;
+    background-color: #fff;
+    transition: all 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+  }
+  
+  .courseSearch__card:hover,
+  .courseSearch__card:focus {
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.3) 0 8px 20px;
+    color: rgba(0, 0, 0, 0.9);
+  }
+  
+  .courseSearch__card:hover {
+    transform: translateY(-2px);
+    text-decoration: none;
+  }
+  
+  .courseSearch__card:active {
+    background-color: #f0f0f1;
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+    color: rgba(0, 0, 0, 0.65);
+    transform: translateY(0);
+  }
+  
+  .courseSearch__card img {
+    width: 100%;
+  }
+  

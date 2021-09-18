@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchCourseMenu } from "../../Redux/Actions/course";
+import { Link } from "react-router-dom";
 
 import style from "./CourseListStyle.module.css";
 
@@ -14,6 +15,7 @@ class CourseList extends Component {
             <h3 className={style.courseList__header}>{item.tenKhoaHoc}</h3>
             <p>{item.nguoiTao.hoTen}</p>
             <p>Rating</p>
+            <Link to={`/detail/${item.maKhoaHoc}`} className="btn btn-secondary">Go to detail</Link>
           </div>
         </div>
       );
